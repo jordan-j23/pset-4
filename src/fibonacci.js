@@ -1,13 +1,26 @@
 const readlineSync = require("readline-sync");
 
-console.log(Number(readlineSync.question("Positive integer: ")));
-console.log(Number(readlineSync.question("Positive integer: ")));
-console.log(Number(readlineSync.question("Positive integer: ")));
-console.log(Number(readlineSync.question("Positive integer: ")));
+let value = 0;
 
-const INT_MIN = 1;
-const INT_MAX = 78;
+let a = 0;
+let b = 1;
+let c = 1;
 
-while (integer >= INT_MIN && integer <= INT_MAX) {
+while (value < 1 || value > 78) {
+value = readlineSync.question("Positive integer: ");
+
+
+num = parseInt(value);
+
+if (num > 0 && num <= 78) {
+for (i = 2; i <= num; i++) { 
+c = a + b; 
+a = b;
+b = c;
+}
+}
 
 }
+
+c = c.toLocaleString();
+console.log("\n" + c + '.');
